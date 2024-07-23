@@ -1,0 +1,62 @@
+@import "variables";
+
+@mixin flex($direction){
+  display: flex;
+  flex-direction:$direction;
+}
+
+@mixin justifyContent(){
+  justify-content: center;
+  align-items: center ;
+}
+
+.plans-div,h2{
+text-align: $textAlignCenter;
+
+}
+
+.plans-icon-text-row,.plans-container{
+  @include flex(row);
+}
+
+.headings-container{
+  @include flex(column);
+  @include justifyContent();
+}
+
+
+.plans-section{
+width: 100%;
+  .headings-container{
+
+  h2{
+    color:$blackColor;
+  }
+  .line{
+    background: $blackColor;
+  }
+  }
+}
+
+.plans-container{
+justify-content: space-around;
+
+  .plans-div{
+    width: 20rem ;
+    height: 25rem;
+    background: $serviceBoxColor;
+    box-shadow: .2px .2px 12px .2px black;
+  }
+  h2{
+    color:$whiteColor;
+  }
+  .plans-icon-text-row ion-icon{
+    color:$whiteColor;
+    margin:0px 0px 0px 20px;
+    font-size: 3rem;
+  }
+  .plans-icon-text-row p{
+    margin:10px 0px 0px -10px;
+  }
+
+}
